@@ -245,63 +245,103 @@ section {
     padding: 0 12px 0 0;
 }
 
-@media (max-width:1023px) {
+/* Common styles for all screen sizes */
+@media (max-width: 1023px) {
     header {
-        padding: 0px 0px;
+        padding: 10px 20px; /* Reduce header padding for smaller screens */
+    }
+
+    .navigation {
+        display: none; /* Hide navigation links by default on smaller screens */
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center; /* Center-align navigation links */
+        position: absolute;
+        top: 70px; /* Adjust top position to prevent overlapping with header */
+        left: 0;
+        background-color: #f0f0f0;
+        width: 100%;
+        z-index: 1;
     }
 
     .navigation a {
-        text-align: center;
-        padding-left: 10px;
-
-
+        padding: 10px 0; /* Add padding to navigation links */
+        border-bottom: 1px solid #ccc; /* Add bottom border to separate links */
+        width: 100%; /* Make navigation links full width */
+        text-align: center; /* Center-align navigation links */
     }
 
-    /* .title{
-        font-size: 1.8em;
-    } */
-
-    section {
-        padding: 90px 20px;
+    .navigation.active {
+        display: flex; /* Show navigation links when menu is active */
     }
 
-    .main-content h2 {
-        font-size: 1em;
-
+    .main {
+        padding: 100px 20px; /* Reduce main section padding for smaller screens */
     }
 
-    .main-content h3 {
-        font-size: 1.6em;
+    .main h2 {
+        font-size: 1.2em; /* Decrease font size for smaller screens */
     }
 
-    .content {
-
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+    .main h2 span {
+        font-size: 2.5em; /* Decrease font size for smaller screens */
     }
 
-
-}
-
-@media (max-width: 600px) {
-
-    /* Adjust for smaller screens like Realme and iPhone */
-    .search-bar {
-
-        width: calc(70%-50px);
-        flex-direction: column;
-        /* align-items: stretch; */
+    .main h3 {
+        font-size: 1.5em; /* Decrease font size for smaller screens */
     }
 
-    #searchInput,
-    #searchButton {
-        margin: 5px;
-        /* width: 100%; */
+    .main-btn {
+        font-size: 1em; /* Decrease font size for smaller screens */
+    }
+
+    .projects .content {
+        flex-direction: column; /* Stack project cards vertically on smaller screens */
+        align-items: center; /* Center-align project cards */
     }
 
     .project-card {
-        width: calc(30% - 20px);
-        /*margin: 5px;*/
+        width: 100%; /* Make project cards full width on smaller screens */
+        margin: 15px 0; /* Adjust margin for stacked project cards */
+    }
+
+    .footer {
+        flex-direction: column; /* Stack footer content vertically on smaller screens */
+        align-items: center; /* Center-align footer content */
+    }
+}
+
+/* Styles specific to phones (max-width: 600px) */
+@media (max-width: 600px) {
+    .logo {
+        font-size: 1.5em; /* Decrease font size for smaller screens */
+    }
+
+    .navigation {
+        top: 50px; /* Adjust top position for smaller screens */
+    }
+
+    .main {
+        padding: 80px 20px; /* Further reduce main section padding for phones */
+    }
+
+    .main h2 {
+        font-size: 1em; /* Decrease font size for phones */
+    }
+
+    .main h2 span {
+        font-size: 2em; /* Decrease font size for phones */
+    }
+
+    .main h3 {
+        font-size: 1.2em; /* Decrease font size for phones */
+    }
+
+    .main-btn {
+        font-size: 0.9em; /* Decrease font size for phones */
+    }
+
+    .project-card {
+        width: 100%; /* Make project cards full width on phones */
+        margin: 10px 0; /* Adjust margin for stacked project cards on phones */
     }
 }
