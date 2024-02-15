@@ -245,7 +245,7 @@ section {
 
 @media (max-width:1023px){
     header{
-        padding: 12px 20px;
+        padding: 14px 9px;
     }
 
     .navigation a{
@@ -279,7 +279,7 @@ section {
     body{
         font-size: 10px;
     }
-
+   
     .main-content h2{
         font-size: 0.8em;
     }
