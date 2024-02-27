@@ -10,7 +10,7 @@
 
 
 header {
-    background-color: #f0f0f0;
+    background-color: #0084FF;
     width: 100%;
     position: fixed;
     z-index: 999;
@@ -22,14 +22,14 @@ header {
 
 .logo{
     text-decoration: none;
-    color: #3a6cf4;
+    color: #C3F0FF;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.2em;
 }
 
 .navigation a{
-    color: #3a6cf4;
+    color: #C3F0FF;
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 500;
@@ -106,22 +106,21 @@ section {
 .title {
     display: flex;
     justify-content: center;
-    color: #3a6cf4;
+    color: #0084FF;
     font-size: 2.2em;
     font-weight: 800;
     margin-bottom: 30px;
 }
 
 .content {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+   
 }
 
 .card {
     background-color: #fff;
-    width: 21.25em;
     box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
     border-radius: 10px;
     padding: 25px;
@@ -159,10 +158,8 @@ section {
 }
 
 .project-card {
-    background-color: #fff;
-    border: 1px solid #fff;
+    
     min-height: 14em;
-    width: 23em;
     overflow: hidden;
     border-radius: 10px;
     margin: 20px;
@@ -181,14 +178,7 @@ section {
     width: 100%
 }
 
-.project-info {
-    padding: 1em;
-}
 
-.project-category {
-    font-size: 0.8em;
-    color: #000;
-}
 
 .project-title {
     display: flex;

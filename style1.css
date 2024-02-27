@@ -1,74 +1,339 @@
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-    }
-    .container {
-        max-width: 800px;
-        margin: 50px auto;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .pricing-table {
-        display: flex;
-        justify-content: center;
-    }
-    .plan {
-        flex: 1;
-        text-align: center;
-        padding: 30px;
-        margin: 0 15px;
-        border-radius: 8px;
-        background-color: #f9f9f9;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .plan h3 {
-        font-size: 24px;
-        color: #333;
-    }
-    .plan .price {
-        font-size: 36px;
-        color: #007bff;
-        margin: 20px 0;
-    }
-    .number { 
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        padding: 16px;
-        margin:25px 58px ;
-        background: #007bff;
-        color: #f9f9f9;
-        text-align: center;
-        font-size: 25px;
-       
-    } 
 
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+
+
+header {
+    background-color: #0084FF;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    padding: 10px 200px ;
+}
+
+.logo{
+    text-decoration: none;
+    color: #C3F0FF;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.navigation a{
+    color: #C3F0FF;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.navigation a:hover{
+    color: #601cfc;
+}
+
+section {
+    padding: 100px 200px;
     
-    /* Customize for specific numbers */
+}
+.title {
+    display: flex;
+    justify-content: center;
+    color: #0084FF;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.pricing-plans .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr) );
+}
 
+
+
+
+.plan {
     
-    .plan ul {
-        list-style: none;
-        padding: 0;
+    border: 1px solid #ddd; /* Add borders to the plan */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    padding: 20px; /* Add padding to the plan */
+    margin: 40px 10px; /* Add margin to separate plans and space between plans */
+    text-align: center; /* Center-align content */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.plan:hover {
+    transform: translateY(-5px); /* Add hover effect */
+}
+
+
+.plan h2 {
+    font-size: 24px; /* Increase heading size */
+    color: #007bff; /* Change heading color */
+    margin-bottom: 10px; /* Add spacing below heading */
+}
+
+.plan .price {
+    font-size: 36px; /* Increase price size */
+    font-weight: bold; /* Add bold font weight */
+    margin-bottom: 20px; /* Add spacing below price */
+}
+
+.plan ul {
+    padding: 0; /* Remove default padding */
+    margin-bottom: 20px; /* Add spacing below list */
+}
+
+.plan ul li {
+    list-style: none; /* Remove list bullet */
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+
+.btn {
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.7em;
+    padding-right: 30px;
+}
+
+
+.more-details {
+    text-decoration: none;
+    color: #3a6cf4;
+}
+
+.more-details:hover {
+    color: #601cfc;
+}
+
+.contact .icon{
+    font-size: 4.5em;
+}
+
+.contact .info h3 {
+    color: #000;
+}
+
+.contact .info p {
+    font-size: 1.5em;
+}
+
+.footer {
+    background-color: #000016;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    
+  
+}
+
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-title span {
+    color: #3a6cf4;
+}
+
+.footer .social-icons a{
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+}
+
+@media (max-width:1023px){
+    header{
+        padding: 14px 9px;
     }
-    .plan ul li {
-        margin-bottom: 15px;
-        font-size: 20px;
+
+    .navigation a{
+        padding-left: 10px;
     }
-    .plan .btn {
-        display: block;
-        padding: 10px 20px;
-        text-decoration: none;
-        background-color: #007bff;
-        color: #fff;
-        border-radius: 5px;
-        transition: background-color 0.3s;
+
+    .title{
+        font-size: 1.8em;
     }
-    .plan .btn:hover {
-        background-color: #0056b3;
+
+    section{
+        padding: 80px 20px;
     }
+
+    .main-content h2{
+        font-size: 1em;
+    }
+
+    .main-content h3{
+        font-size: 1.6em;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width:641px){
+    body{
+        font-size: 10px;
+    }
+   
+    .main-content h2{
+        font-size: 0.8em;
+    }
+
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+     
+    }
+}
+
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.7em;
+    padding-right: 30px;
+}
+
+
+.more-details {
+    text-decoration: none;
+    color: #3a6cf4;
+}
+
+.more-details:hover {
+    color: #601cfc;
+}
+
+.contact .icon{
+    font-size: 4.5em;
+}
+
+.contact .info h3 {
+    color: #000;
+}
+
+.contact .info p {
+    font-size: 1.5em;
+}
+
+.footer {
+    background-color: #000016;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    
+  
+}
+
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-title span {
+    color: #3a6cf4;
+}
+
+.footer .social-icons a{
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+}
+
+@media (max-width:1023px){
+    header{
+        padding: 14px 9px;
+    }
+
+    .navigation a{
+        padding-left: 10px;
+    }
+
+    .title{
+        font-size: 1.8em;
+    }
+
+    section{
+        padding: 80px 20px;
+    }
+
+    .main-content h2{
+        font-size: 1em;
+    }
+
+    .main-content h3{
+        font-size: 1.6em;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width:641px){
+    body{
+        font-size: 10px;
+    }
+   
+    .main-content h2{
+        font-size: 0.8em;
+    }
+
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+     
+    }
+}
